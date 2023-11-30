@@ -1,0 +1,43 @@
+{% include 'plantilla.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="/jugador/agregar">Agregar</a></p>
+    <table border=1>
+        <tr> 
+            <th> Id </th> 
+            <th> Nombres</th> 
+            <th> Apellidos</th> 
+            <th> Fecha Nacimiento </th> 
+            <th> VER</th>
+            <th> ELIMINAR</th>
+            <th> EDITAR</th>
+        </tr> 
+        
+        {% for objugador in jugadores %}
+        <tr>
+            <td> {{ objugador.id }} </td>
+            <td> {{ objugador.nombres }} </td>
+            <td> {{ objugador.apellidos }} </td>
+            <td> {{ objugador.nacimiento }} </td>
+            <td> <a href="/jugador/ver/{{objugador.id}}">Ver</a></td>
+            <td> <a href="/jugador/eliminar/{{objugador.id}}">Eliminar</a></td>
+            <td><a href="/jugador/editar/{{objugador.id}}">Editar</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    
+
+
+
+    <script src=""></script>
+</body>
+</html>

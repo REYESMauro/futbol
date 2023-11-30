@@ -1,0 +1,45 @@
+{% include 'equipo.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="form-container">
+        <h5 class="h">EDITAR EQUIPO</h5>
+      <form method="POST" action="/equipo/editar/{{objequipo.id}}">
+
+        <label for="id">id del Equipo:</label>
+        <input type="number" name="id" value="{{objequipo.id}}" required><br><br>
+
+        <label for="nombres">Nombre del Equipo:</label>
+        <input type="varchar" name="nombre" value="{{objequipo.nombre}}" required><br><br>
+        
+        <label for="apellidos">Lugar del Equipo:</label>
+        <input type="varchar"  name="lugar" value="{{objequipo.lugar}}" required><br><br>
+
+        <label for="nacim">Delegado del Equipo:</label>
+        <input type="varchar"  name="deleg" value="{{objequipo.delegado}}" required><br><br>
+        
+        
+        <input type="submit" value="GUARDAR">
+      </form>
+    </div>
+
+    <button class="form-button" onclick="goBack()">
+      <i class="fas fa-arrow-left"></i> Atras
+        </button>
+    
+    
+     <script>
+         function goBack() {
+             window.history.back();
+         }
+     </script>
+
+</body>
+</html>

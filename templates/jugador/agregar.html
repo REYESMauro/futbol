@@ -1,0 +1,32 @@
+{% include 'datos.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agregar</title>
+</head>
+<body>
+    <div class="form-container"> 
+    <h5 class="h">AGREGAR JUGADOR</h5>
+    <form method="POST" action="/jugador/agregar">
+
+        <label for="id">id del Jugador:</label>
+        <input type="number" name="id" required><br><br>
+
+        <label for="nombres">Nombres del Jugador:</label>
+        <input type="varchar" name="nombres" required><br><br>
+        
+        <label for="apellidos">apellidos del Jugador:</label>
+        <input type="varchar"  name="apellidos" required><br><br>
+
+        <label for="nacim">nacimiento del Jugador:</label>
+        <input type="date"  name="nacim" required><br><br>
+        
+        
+        <input class="form-button" type="submit" value="GUARDAR">
+    </form>
+    </div>
+</body>
+</html>

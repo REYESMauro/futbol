@@ -1,0 +1,61 @@
+{% include 'plantillasrt.html' %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Grupos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tabla de Grupos</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Grupo</th>
+                <th>Equipo</th>
+                <th>Puntos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Grupo A</td>
+                <td>Equipo A1</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Equipo A2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Grupo B</td>
+                <td>Equipo B1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Equipo B2</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

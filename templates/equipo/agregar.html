@@ -1,0 +1,35 @@
+{% include 'datos.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agregar</title>
+</head>
+<body>
+
+    <div class="form-container">
+      <h5 class="h">AGREGAR EQUIPO</h5>
+      <form method="POST" action="/equipo/agregar">
+
+        <label class="form-label" for="id">id del Equipo:</label>
+        <input class="form-input" type="number" name="id" required><br><br>
+
+        <label class="form-label" for="nombres">Nombre del Equipo:</label>
+        <input class="form-input" type="varchar" name="nombre" required><br><br>
+        
+        <label class="form-label" for="apellidos">Lugar del Equipo:</label>
+        <input class="form-input" type="varchar"  name="lugar" required><br><br>
+
+        <label class="form-label" for="nacim">Delegado del Equipo:</label>
+        <input class="form-input" type="varchar"  name="deleg" required><br><br>
+        
+        
+        <input class="form-button" type="submit" value="Agregar Equipo">
+
+        
+      </form>
+    </div>
+</body>
+</html>

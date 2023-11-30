@@ -1,0 +1,46 @@
+{% include 'sorteo.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo de Equipos</title>
+</head>
+<body>
+    <div class="form-container">
+        <h5 class="h">RESULTADO DEL SORTEO</h5>
+        <form method="POST" action="/sorteo/resultado">
+
+
+        <h2>Grupo A</h2>
+    <ul>
+        {% for equipo in grupo1 %}
+            <li>{{ equipo.nombre }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Grupo B</h2>
+    <ul>
+        {% for equipo in grupo2 %}
+            <li>{{ equipo.nombre }}</li>
+        {% endfor %}
+
+        
+    </ul>
+
+     <input class="form-button" type="submit" value="GUARDAR SORTEO">
+
+
+    </div>
+
+    <input class="form-button" type="button" value="Atras" onclick="goBack()">
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    
+</body>
+</html>
+

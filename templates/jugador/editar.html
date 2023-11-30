@@ -1,0 +1,40 @@
+{% include 'datos.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form-container">
+        <h5 class="h">EDITAR JUGADOR</h5>
+      <form method="POST" action="/jugador/editar/{{objugador.id}}">
+
+        <label for="id">id del Jugador:</label>
+        <input type="number" name="id" value="{{objugador.id}}" required><br><br>
+
+        <label for="nombres">Nombres del Jugador:</label>
+        <input type="varchar" name="nombres" value="{{objugador.nombres}}" required><br><br>
+        
+        <label for="apellidos">apellidos del Jugador:</label>
+        <input type="varchar"  name="apellidos" value="{{objugador.apellidos}}" required><br><br>
+
+        <label for="nacim">nacimiento del Jugador:</label>
+        <input type="date"  name="nacim" value="{{objugador.nacimiento}}" required><br><br>
+        
+        
+        <input class="form-button" type="submit" value="GUARDAR">
+      </form>
+    </div>
+
+    <input class="form-button-atras" type="button" value="Atras" onclick="goBack()">
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

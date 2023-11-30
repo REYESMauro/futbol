@@ -1,0 +1,34 @@
+{% include 'datos.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ver Jugador</title>
+    <link rel="stylesheet" href="https://fontawesome.com/.">
+
+
+</head>
+<body>
+    <div class="form-container" >
+      <h5 class="h">detalles del equipo </h5>
+      <h1>Ver Jugador </h1>
+      <ul>
+        <li> <b>Id:</b> {{ objugador.id }} </li>
+        <li> <b>Nombre:</b> {{ objugador.nombres }} </li>
+        <li> <b>Apellidos:</b> {{ objugador.apellidos }} </li>
+        <li> <b>Fecha Nacimiento:</b> {{ objugador.nacimiento }} </li>
+      </ul>
+    </div>
+
+    <input class="form-button-atras" type="button" value="Atras" onclick="goBack()">
+
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+
+    
+</body>
+</html>

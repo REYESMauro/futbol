@@ -1,0 +1,44 @@
+{% include 'plantilla.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a href="/sorteo/Agregar">AGREGAR</a></p>
+
+    <table border=1>
+        <tr> 
+            <th> Id </th> 
+            <th> Nombre</th> 
+            <th> Lugar</th> 
+            <th> Delegado </th> 
+            <th> VER</th>
+            <th> ELIMINAR</th>
+            <th> EDITAR</th>
+        </tr> 
+        
+        {% for objequipo in equipos %}
+        <tr>
+            <td> {{ objequipo.id }} </td>
+            <td> {{ objequipo.nombre }} </td>
+            <td> {{ objequipo.lugar }} </td>
+            <td> {{ objequipo.delegado }} </td>
+            <td> <a href="/equipo/ver/{{objequipo.id}}">Ver</a></td>
+            <td> <a href="/equipo/eliminar/{{objequipo.id}}">Eliminar</a></td>
+            <td><a href="/equipo/editar/{{objequipo.id}}">Editar</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <p class="sort"><a class="si" href="/equipo/sorteo">SORTEo</a></p>
+
+
+    <script src=""></script>
+
+</body>
+</html>

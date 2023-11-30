@@ -1,0 +1,32 @@
+{% include 'equipo.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ver Equipo</title>
+
+</head>
+<body>
+  <div class="form-container" >
+    <h5 class="h">detalles del equipo </h5>
+    <ul>
+        <li> <b>Id:</b> {{ objequipo.id }} </li>
+        <li> <b>Nombre:</b> {{ objequipo.nombre }} </li>
+        <li> <b>Lugar:</b> {{ objequipo.lugar}} </li>
+        <li> <b>Delegado:</b> {{ objequipo.delegado }} </li>
+    </ul>
+    
+  </div>
+  
+  <button class="form-button" onclick="goBack()">
+  <i class="fas fa-arrow-left"></i> Atras
+    </button>
+
+
+ <script>
+     function goBack() {
+         window.history.back();
+     }
+ </script>
+    
+</body>
+</html>
